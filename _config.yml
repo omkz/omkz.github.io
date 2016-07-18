@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://omkz.github.io
+title: n00n hacker area
+tagline: A log of everyday life
+description: not too awesome site
+paginate: 5
