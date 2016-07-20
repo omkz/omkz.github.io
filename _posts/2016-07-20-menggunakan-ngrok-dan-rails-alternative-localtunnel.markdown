@@ -22,12 +22,12 @@ Forwarding                    https://5be603ec.ngrok.io -> localhost:8000
                                                                                                                                                                         
 Connections                   ttl     opn     rt1     rt5     p50     p90                                                                                               
                               0       0       0.00    0.00    0.00    0.00       
+
 ```
 
 rails s -p 8080
 
-
-~~~
+```
 ngrok by @inconshreveable                                                                                                                               (Ctrl+C to quit)
                                                                                                                                                                         
 Tunnel Status                 online                                                                                                                                    
