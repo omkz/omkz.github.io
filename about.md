@@ -9,6 +9,6 @@ permalink: /about/
 
 <p>
 Contact Me via:
-<a href="mailto:someone@omenkzz.com?Subject=Hello" target="_top">email</a>
+<a href="mailto:omenkzz@gmail.com?Subject=Hello" target="_top">email</a>
 </p>
 
