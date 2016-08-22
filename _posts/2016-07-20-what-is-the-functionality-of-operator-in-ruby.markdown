@@ -3,7 +3,7 @@ published: true
 title: 'what is the functionality of &:  operator in ruby?'
 layout: post
 ---
-#there is not operator:
+#that is not operator:
 
 ```ruby
 
