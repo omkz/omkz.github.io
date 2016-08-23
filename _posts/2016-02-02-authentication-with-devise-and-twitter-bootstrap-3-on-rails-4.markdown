@@ -1,93 +1,52 @@
 ---
 published: true
-title: authentication with devise and twitter bootstrap 3
+title: buat user baru dengan password di postgresql
 layout: post
 ---
 
-here is application.html.erb
-
-```erb
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Social</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= render 'shared/navbar' %>
-<%= render 'shared/messages' %>
-
-<div class="container">
-  <%= yield %>
-</div>
-</body>
-</html>
 ```
+omenks@ip-172-31-24-xxx:~$ sudo su - postgres
 
-_shared/navbar.html.erb
+postgres@ip-172-31-24-xxx:~$ createuser test_user
 
-```erb
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <%= link_to 'Social', root_path, class: 'navbar-brand' %>
-    </div>
-    <div id="navbar">
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Trending', "#" %></li>
-      </ul>
-      <ul class="nav navbar-nav pull-right">
-        <% if user_signed_in? %>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <%= current_user.email %>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><%= link_to 'Profile', edit_user_registration_path %></li>
-                <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-              </ul>
-            </li>
-        <% else %>
-            <li><%= link_to 'Log In', new_user_session_path %></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-</nav>
-```
+postgres@ip-172-31-24-xxx:~$ psql
+psql (9.3.9)
+Type "help" for help.
 
-_shared/messages.html.erb
+postgres=# \password test_user
 
-```erb
-<div class="container">
-  <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>">
-        <%= value %>
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      </div>
-  <% end %>
-</div>
-```
+Enter new password: 
+Enter it again: 
 
+postgres=# psql
+postgres-# \q
+postgres@ip-172-31-24-xxx:~$ psql -U test_user -d postgres -h 127.0.0.1 -W
 
-style.css
+Password for user test_user: 
+psql (9.3.9)
+SSL connection (cipher: DHE-RSA-AES256-GCM-SHA384, bits: 256)
+Type "help" for help.
 
-```css
-body {
-  padding-top: 100px;
-  font-family: 'Noto Sans', sans-serif;
-}
+postgres=# \du
+                             List of roles
+ Role name |                   Attributes                   | Member of 
+-----------+------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication | {}
+ test_user |                                                | {}
+ xxx       |                                                | {}
 
-.alert-alert {
-  @extend .alert-warning;
-}
+postgres=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+-----------+----------+----------+-------------+-------------+-----------------------
+ jerry     | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ test1     | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+(5 rows)
 
-.alert-notice {
-  @extend .alert-info;
-}
+postgres=# 
 ```
