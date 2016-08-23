@@ -77,7 +77,7 @@ _shared/messages.html.erb
 
 style.css
 
-```css
+```scss
 body {
   padding-top: 100px;
   font-family: 'Noto Sans', sans-serif;
