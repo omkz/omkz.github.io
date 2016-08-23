@@ -3,17 +3,19 @@ published: true
 title: tutorial crud rails and angular.js Part 2
 layout: post
 ---
-1. buat model menggunakan generator, misal :
+
+### 1. buat model menggunakan generator, misal :
  
   ```
   rails g resource book isbn:string title:string author:string publisher:string
   ```
+
   lakukan migration agar table terbentuk :
   ```
   rake db:migrate
   ```
 
-2. isikan sebuah data ke database. bisa diisi manual atau paka seed databasenya rails di db/seed, tambahkan beriku :
+### 2. isikan sebuah data ke database. bisa diisi manual atau paka seed databasenya rails di db/seed, tambahkan beriku :
   
  ```
  Book.create!(isbn:'978-3-16-148410-0', title: 'rails 4 tutorial', author:'kurnia muhamad',publisher: 'majumundur')
@@ -27,7 +29,7 @@ layout: post
  ```
  
  
-3. update route menjadi berikut, karena kita mau buat aplikasi angular.js maka hanya butuh json data :
+### 3. update route menjadi berikut, karena kita mau buat aplikasi angular.js maka hanya butuh json data :
 
  ```
  scope :api do
@@ -38,7 +40,7 @@ layout: post
   root 'home#index'
  ```
  
-4. update controller untuk menghasilkan data json :
+### 4. update controller untuk menghasilkan data json :
 
  ```
  class BooksController < ApplicationController
@@ -53,18 +55,18 @@ layout: post
  ```
  start server dan buka di url `http://localhost:3000/api/v1/books.json` maka data `books` akan tampil dalam bentuk `json`
 
-5. buat `books_controller.js` pada folder `assets/angular/controllers`, yang nanti `berperan` sebgai angular.js controller, isikan    sbb :
+### 5. buat `books_controller.js` pada folder `assets/angular/controllers`, yang nanti `berperan` sebgai angular.js controller, isikan    sbb :
   
   ```
   app.controller('BooksController', ['$scope', '$resource', function($scope, $resource) {
     var Books = $resource('/api/v1/books');
     $scope.books = Books.query();
   }]);
-  
   ```
-5. tambahkan baris berikut untuk menampilkan data di view. pada folder view home/index :
+
+### 6. tambahkan baris berikut untuk menampilkan data di view. pada folder view home/index :
  
- ```
+```erb
  <div ng-controller="BooksController">
   <ul>
     <li ng-repeat="book in books">
@@ -72,13 +74,13 @@ layout: post
     </li>
   </ul>
  </div>
- 
  ```
+
  data diatas diakses melalui ngResource module pada `books_controller.js`.
  
-6. sekarang kita akan menggunakan pendekatan menggunakan service angular.js. buat file `Book.js` didalam folder services dan isi :
-  
-  ```
+### 7. sekarang kita akan menggunakan pendekatan menggunakan service angular.js. buat file `Book.js` didalam folder services dan isi :
+
+```javascript
    app.factory('Book', ['$resource', function($resource) {
        function Book() {
            this.service = $resource('/api/v1/books/:bookId', {stockId: '@id'});
@@ -88,8 +90,7 @@ layout: post
        };
        return new Book;
    }]);
-  
-  ```
+```
   
   dan modif `books_controller.js` menjadi :
   ```
@@ -99,7 +100,7 @@ layout: post
   ```
 ### membuat method DELETE 
 
-8. tambahkan menu delete pada list buku :
+### 8. tambahkan menu delete pada list buku :
   ```
   <div ng-controller="BooksController">
    <ul>
@@ -170,5 +171,4 @@ layout: post
 
   ```
   
-  ###membuat method CREATE
 
