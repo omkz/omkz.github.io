@@ -1,6 +1,6 @@
 ---
 published: true
-title: tutorial crud rails and angular.js Part 1
+title: tutorial crud rails 4 and angular.js Part 1
 layout: post
 ---
 #### 1. pertama buka terminal
