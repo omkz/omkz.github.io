@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>tutorial crud rails 4 and angular.js Part 1</title>
+  <meta name="description" content="1. pertama buka terminal">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2014/06/28/tutorial-rails-angular-part1.html">
+  <link rel="alternate" type="application/rss+xml" title="omz notes" href="http://yourdomain.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">omz notes</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">tutorial crud rails 4 and angular.js Part 1</h1>
+    <p class="post-meta"><time datetime="2014-06-28T00:00:00+07:00" itemprop="datePublished">Jun 28, 2014</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h4 id="pertama-buka-terminal">1. pertama buka terminal</h4>
+
+<h4 id="ketikan-command-karena-saya-anti-tdd-d-maka-beri-parameter--t">2. ketikan command. karena saya anti TDD :D maka beri parameter -T</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rails new RailsAngularCrudTutorial -T 
+</code></pre>
+</div>
+
+<h4 id="pasang-gem-angularjs-rails-di-gemfile-">3. pasang gem angularjs-rails di gemfile :</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem 'angularjs-rails'
+</code></pre>
+</div>
+
+<p>run bundle install</p>
+
+<h4 id="buat-folder-angular-didalam-appassetsjavascripts-didalam-folder-angular-buat-folder-controllers-services-jika-diperlukan-buat-juga-mainjs-di-dalam-foder-javascript">4. buat folder <code class="highlighter-rouge">angular</code> didalam <code class="highlighter-rouge">app/assets/javascripts</code>. Didalam folder <code class="highlighter-rouge">angular</code> buat folder <code class="highlighter-rouge">controllers, services</code> jika diperlukan. buat juga main.js di dalam foder javascript</h4>
+
+<ul>
+  <li>tambahkan pada <code class="highlighter-rouge">application.js</code> menjadi :</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//= require angular
+//= require angular-resource
+//= require main.js
+//= require_tree ./angular
+//= require_tree .
+    
+</code></pre>
+</div>
+
+<h4 id="generate-controller-menggunakan-command-">5. generate controller menggunakan command :</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rails g controller home index
+</code></pre>
+</div>
+
+<p>edit konfigurasi routes.rb agar controller tersebut menjadi default :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>root 'home#index'
+</code></pre>
+</div>
+
+<h4 id="tampahkan-skrip-berikut-di-mainjs-dengan-skrip-berikut-">6. tampahkan skrip berikut di main.js dengan skrip berikut :</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var app = angular.module("RailsAngular", ['ngResource']);
+</code></pre>
+</div>
+
+<h4 id="di-view-folder-layoutsapplication-ganti-baris-html-dengan-">7. di view, folder layouts/application ganti baris &lt;html&gt; dengan :</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">ng-app=</span><span class="s">"RailsAngular"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">ng-app="RailsAngular"</code> harus sama dengan nama module di <code class="highlighter-rouge">main.js</code></p>
+
+<h4 id="di-bagian-view-folder-homeindex-ganti-menjadi-">8. di bagian view, folder home/index ganti menjadi :</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1&gt;welcome,&lt;/h1&gt;
+&lt;form&gt;
+&lt;input type="text" ng-model='name' placeholder="Enter a name"&gt;
+&lt;input type="submit" value="Add"&gt;
+&lt;/form&gt;
+
+</code></pre>
+</div>
+
+<p>sekarang coba jalankan aplikasi dan inputkan nama anda di textinput .. voila . .. .selanjutnya di part 2 kita akan bertemu database</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>
