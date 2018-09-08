@@ -21,3 +21,6 @@ github_username:  omkz
 markdown: kramdown
 theme: minima
 
+disqus:
+  shortname: omkz-github-io
+
