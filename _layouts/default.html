@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+    
+    {%- include hero.html -%} 
+
+    {{ content }}
+  
+  <script async type="text/javascript" src="{{"/assets/js/bulma.js"}}"></script> 
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="container">
+  <!-- START ARTICLE FEED -->
+  <section class="articles">
+      <div class="column is-8 is-offset-2">
+          <!-- START ARTICLE -->
+        {%- for post in site.posts -%}
+          <div class="card article">
+              <div class="card-content">
+                  <div class="media">
+                      <div class="media-center">
+                          <img src="{{"/assets/images/ava.png"}}" class="author-image" alt="Placeholder image">
+                      </div>
+                      <div class="media-content has-text-centered">
+                          <p class="title article-title">{{ post.title | escape }}</p>
+                          <p class="subtitle is-6 article-subtitle">
+                              {{ post.date }}
+                          </p>
+                      </div>
+                  </div>
+                  <div class="content article-body">
+                      <p>
+                        {{ post.content }}
+                      </p>
+                      
+                  </div>
+              </div>
+          </div>
+        {%- endfor -%}
+        
+
+     
+  </section>
+  <!-- END ARTICLE FEED -->
+  </div>
+

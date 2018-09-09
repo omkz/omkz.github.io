@@ -12,15 +12,19 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Catatan programming
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://omkz.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 twitter_username: oz
 github_username:  omkz
 
+#theme: jekyll-theme-minimal
 
-# Build settings
+# disqus:
+#   shortname: omkz-github-io
+
+# Conversion
 markdown: kramdown
-theme: minima
-
-disqus:
-  shortname: omkz-github-io
-
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
