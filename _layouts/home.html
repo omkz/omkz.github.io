@@ -13,7 +13,10 @@ layout: default
                           <img src="{{"/assets/images/ava.png"}}" class="author-image" alt="Placeholder image">
                       </div>
                       <div class="media-content has-text-centered">
-                          <p class="title article-title">{{ post.title | escape }}</p>
+
+                          <a href="{{ post.url | relative_url }}" class="is-size-5" >
+                                {{ post.title | escape }}
+                          </a>
                           <p class="subtitle is-6 article-subtitle">
                               {{ post.date | date: "%B %d, %Y"}}
                           </p>
