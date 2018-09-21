@@ -1,17 +1,8 @@
 ---
 layout: default
 ---
-<section class="hero is-info is-medium is-bold">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title">sekedar tulisan pengingat.</h1>
-        </div>
-    </div>
-</section>
 
-<div class="container">
-  <!-- START ARTICLE FEED -->
-  <section class="articles">
+<div class="container">   
       <div class="column is-8 is-offset-2">
           <!-- START ARTICLE -->
         {%- for post in site.posts -%}
@@ -28,19 +19,9 @@ layout: default
                           </p>
                       </div>
                   </div>
-                  <div class="content article-body">
-                      <p>
-                        {{ post.content }}
-                      </p>
-                      
-                  </div>
               </div>
           </div>
         {%- endfor -%}
-        
-
-     
-  </section>
-  <!-- END ARTICLE FEED -->
   </div>
+</div>
 
