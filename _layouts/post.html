@@ -2,31 +2,39 @@
 layout: default
 ---
 
-<div class="container">   
-    <div class="column is-8 is-offset-2">
-        <div class="card article">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-center">
-                        <img src="{{"/assets/images/ava.png"}}" class="author-image" alt="Placeholder image">
-                    </div>
-                    <div class="media-content has-text-centered">
-                        <p class="is-size-2">{{ page.title | escape }}</p>
-                        <p class="subtitle is-6 article-subtitle">
-                            {{ page.date | date: "%B %d, %Y"}}
-                        </p>
-                    </div>
+<section class="article">
+        <div class="container">   
+                <div class="columns">
+                        <div class="column is-8 is-offset-2">
+                                <div class="card article">
+                                    <div class="card-content">
+                                        <div class="media">
+                                            <div class="media-center">
+                                                <img src="{{"/assets/images/ava.png"}}" class="author-image" alt="Placeholder image">
+                                            </div>
+                                            <div class="media-content has-text-centered">
+                                                <p class="is-size-2">{{ page.title | escape }}</p>
+                                                <p class="subtitle is-6 article-subtitle">
+                                                    {{ page.date | date: "%B %d, %Y"}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="content article-body">
+                                            <p>
+                                              {{ content }}
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                 </div>
-                <div class="content article-body">
-                    <p>
-                      {{ content }}
-                    </p>
-                    
-                </div>
+               
             </div>
-        </div>
-</div>
-</div>
+            
+
+</section>
 
 <div class="container">
     <div class="column is-8 is-offset-2">

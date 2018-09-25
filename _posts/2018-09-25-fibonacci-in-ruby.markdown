@@ -32,7 +32,7 @@ p (1..150).map {|i| fib(i)}
 
 ```
 
-yang menjadi masalah dengan kode diatas adalah perfomanya, karena rekursif itu sangat lambat. berikut adalah contoh implementasi lainnya menggunakan teknik memoization:
+yang menjadi masalah dengan kode diatas adalah perfomanya yang lambat karena fungsi yang rekursif. berikut adalah contoh optimasi fungsi tersebut menggunakan teknik memoization agar loadnya lebih cepat:
 
 ```ruby
 
