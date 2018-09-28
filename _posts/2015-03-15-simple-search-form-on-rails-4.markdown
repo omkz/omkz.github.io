@@ -4,7 +4,7 @@ title: simple search form on rails 4
 layout: post
 ---
 
-index.html.erb
+home/index.html.erb
 
 ```erb
 <%= form_tag(users_path, :method => "get", id: "search-form") do %>
@@ -29,4 +29,9 @@ def index
     @users = User.all.order('created_at DESC')
   end
 end
+```
+route.rb
+
+```ruby
+  get "/search", to: 'home#index'
 ```
