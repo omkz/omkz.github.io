@@ -2,6 +2,8 @@
 published: true
 title: tutorial crud rails 4 and angular.js Part 1
 layout: post
+categories: rails
+tags: [rails, angular.js]
 ---
 #### 1. pertama buka terminal
 

@@ -2,6 +2,8 @@
 published: true
 title: simple search form on rails 4
 layout: post
+categories: rails
+tags: [rails]
 ---
 
 home/index.html.erb

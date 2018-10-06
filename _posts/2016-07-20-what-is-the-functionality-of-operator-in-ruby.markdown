@@ -2,6 +2,10 @@
 published: true
 title: 'what is the functionality of &:  operator in ruby?'
 layout: post
+categories: ruby
+tags: ruby
+categories: ruby
+tags: ruby
 ---
 #that is not operator:
 

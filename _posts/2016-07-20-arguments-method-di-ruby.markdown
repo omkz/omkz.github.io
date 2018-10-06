@@ -2,6 +2,8 @@
 published: true
 title: arguments method di ruby
 layout: post
+categories: ruby
+tags: ruby
 ---
 ## 1. single asterisk atau splat operator (*args)
 

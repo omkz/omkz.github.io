@@ -2,6 +2,8 @@
 published: true
 title: authentication with devise and twitter bootstrap 3
 layout: post
+categories: rails
+tags: [rails, devise, twitter bootstrap 3]
 ---
 
 here is application.html.erb

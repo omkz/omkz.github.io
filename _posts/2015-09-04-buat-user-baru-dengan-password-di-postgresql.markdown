@@ -2,6 +2,8 @@
 published: true
 title: buat user baru dengan password di postgresql
 layout: post
+categories: postgresql
+tags: [postgresql]
 ---
 
 ```

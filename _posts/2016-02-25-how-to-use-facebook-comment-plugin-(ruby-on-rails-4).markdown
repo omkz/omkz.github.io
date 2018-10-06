@@ -2,6 +2,8 @@
 published: true
 title: how to use facebook comment plugin ( ruby on rails 4 )
 layout: post
+categories: rails
+tags: [rails, facebook]
 
 ---
 pertama silahkan meluncur kesini :

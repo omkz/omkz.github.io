@@ -2,6 +2,8 @@
 published: true
 title: menggunakan ngrok dan rails, alternative localtunnel
 layout: post
+categories: misc
+tags: ngrok
 ---
 waktu itu ingin menunjukan proses pengembangan aplikasi rails kepada klien. mencari localtunnel kok sudah tidak ada, kemudian nemu ngrok ini.
 

@@ -2,6 +2,8 @@
 published: true
 title: Creating Like Button Using Acts_as_votable Gem On Ruby On Rails
 layout: post
+categories: rails
+tags: rails
 ---
 
 likes_controller.rb
