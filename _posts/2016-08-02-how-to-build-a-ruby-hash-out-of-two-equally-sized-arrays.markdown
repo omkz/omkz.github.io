@@ -2,6 +2,8 @@
 published: true
 title: How to build a Ruby hash out of two equally-sized arrays
 layout: post
+categories: ruby
+tags: ruby
 ---
 ```ruby
 a = [ 4, 5, 6 ]
