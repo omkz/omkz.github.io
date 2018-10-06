@@ -40,8 +40,8 @@ aside.menu .menu-label {
   border-radius: 50%;
 }
 .media-content p {
-  font-size: 14px;
-  line-height: 2.3;
+  // font-size: 14px;
+  line-height: 2;
   font-weight: 700;
   color: #8F99A3;
 }
@@ -58,15 +58,16 @@ article.post:last-child {
 .article-title {
   font-size: 2rem;
   font-weight: lighter;
-  line-height: 2;
+  // line-height: 2;
 }
 .article-subtitle {
   color: #909AA0;
   margin-bottom: 3rem;
 }
 .article-body {
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0 6rem;
+  font-size: 1rem;
 }
 .menu-list li{
   padding: 5px;

@@ -2,7 +2,7 @@
 published: true
 title: Fibonacci Sequence in Ruby
 layout: post
-categories: [ruby, java]
+categories: ruby
 tags: [ruby, fibonacci]
 ---
 
