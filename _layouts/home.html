@@ -2,29 +2,59 @@
 layout: default
 ---
 
-<div class="container">   
-      <div class="column is-8 is-offset-2">
-          <!-- START ARTICLE -->
-        {%- for post in site.posts -%}
-          <div class="card article">
-              <div class="card-content">
-                  <div class="media">
-                      <div class="media-center">
-                          <img src="{{"/assets/images/ava.png"}}" class="author-image" alt="Placeholder image">
-                      </div>
-                      <div class="media-content has-text-centered">
 
-                          <a href="{{ post.url | relative_url }}" class="is-size-5" >
-                                {{ post.title | escape }}
-                          </a>
-                          <p class="subtitle is-6 article-subtitle">
-                              {{ post.date | date: "%B %d, %Y"}}
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        {%- endfor -%}
-  </div>
-</div>
+
+<section class="container">
+    <div class="columns">
+        <div class="column is-3">
+            <!-- <a class="button is-primary is-block is-alt is-large" href="#">C</a> -->
+            <aside class="menu">
+                <p class="menu-label">
+                    Categories
+                </p>
+                <ul class="menu-list">
+                    <li><span class="tag is-dark is-medium ">Ruby</span></li>
+                    <li><span class="tag is-link is-medium ">Ruby on Rails</span></li>
+                    <li><span class="tag is-light is-danger is-medium ">Crystal</span></li>
+                    <li><span class="tag is-success is-medium ">Golang</span></li>
+                    <li><span class="tag is-warning is-medium ">Javascript</span></li>
+                    <li><span class="tag is-primary is-medium ">Misc</span></li>
+                </ul>
+            </aside>
+        </div>
+
+        
+
+   
+        <div class="column is-9">
+            <div class="box content">
+              {%- for post in site.posts -%}
+                <article class="post">
+                    
+                    <a href="{{ post.url | relative_url }}" >
+                            <h4>{{ post.title | escape }}</h4>
+                      </a>
+                    <div class="media">
+                        <div class="media-left">
+                            <p class="image is-32x32">
+                                <img src="{{"/assets/images/ava.png"}}">
+                            </p>
+                        </div>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <a href="#">@omkz</a> {{ post.date | date: "%B %d, %Y"}} &nbsp;
+                                    <span class="tag">Ruby</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </article>
+              {%- endfor -%}
+              
+            </div>
+        </div>
+    </div>
+</section>
 
