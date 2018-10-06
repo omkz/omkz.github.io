@@ -2,6 +2,8 @@
 published: true
 title: Fibonacci Sequence in Ruby
 layout: post
+categories: [ruby, java]
+tags: [ruby, fibonacci]
 ---
 
  Fibonacci atau sering disebut deret atau bilangan fibonacci adalah sebuah deret bilangan yang memiliki pola tertentu, yaitu sebuah suku ke -n , merupakan hasil penjumlahan dari suku (n-1) dengan suku (n-2). berikut adalah contohnya:
