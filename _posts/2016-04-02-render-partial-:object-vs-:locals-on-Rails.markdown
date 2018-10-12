@@ -1,6 +1,6 @@
 ---
 published: true
-title: render partial :object vs :locals on Rails
+title: Render partial :object vs :locals on Rails
 layout: post
 categories: rails
 tags: rails

@@ -1,6 +1,6 @@
 ---
 published: true
-title: how to use facebook comment plugin ( ruby on rails 4 )
+title: How to use Facebook comment plugin ( Ruby on Rails 4 )
 layout: post
 categories: rails
 tags: [rails, facebook]

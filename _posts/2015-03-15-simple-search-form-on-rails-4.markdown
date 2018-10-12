@@ -1,6 +1,6 @@
 ---
 published: true
-title: simple search form on rails 4
+title: Simple search form on Ruby on Rails 4
 layout: post
 categories: rails
 tags: [rails]

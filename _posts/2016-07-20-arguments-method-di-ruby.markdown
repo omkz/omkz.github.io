@@ -1,6 +1,6 @@
 ---
 published: true
-title: arguments method di ruby
+title: Arguments Method in Ruby
 layout: post
 categories: ruby
 tags: ruby

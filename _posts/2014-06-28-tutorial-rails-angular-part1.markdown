@@ -1,6 +1,6 @@
 ---
 published: true
-title: tutorial crud rails 4 and angular.js Part 1
+title: Tutorial CRUD for Ruby on Rails 4 and Angular.js (part 1)
 layout: post
 categories: rails
 tags: [rails, angular.js]
