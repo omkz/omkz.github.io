@@ -1,6 +1,6 @@
 ---
 published: true
-title: How to build a Ruby hash out of two equally-sized arrays
+title: How to build a Ruby hash out of two equally-sized Arrays
 layout: post
 categories: ruby
 tags: ruby

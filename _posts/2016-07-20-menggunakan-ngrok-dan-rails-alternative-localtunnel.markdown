@@ -1,6 +1,6 @@
 ---
 published: true
-title: Menggunakan ngrok dan rails, alternative localtunnel
+title: Menggunakan Ngrok dan Ruby on Rails(Localtunnel alternative)
 layout: post
 categories: misc
 tags: ngrok

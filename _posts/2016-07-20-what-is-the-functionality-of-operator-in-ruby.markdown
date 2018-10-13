@@ -1,6 +1,6 @@
 ---
 published: true
-title: 'What is the functionality of &:  operator in ruby?'
+title: 'What is the functionality of &:  operator in Ruby?'
 layout: post
 categories: ruby
 tags: ruby
