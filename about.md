@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-
-<p>I’m passionate about learning new things and a bit of a space nerd. I enjoy classic films, travelling, chatting about life with friends, universe or god :) and hacking on whatever interests me at the time.</p>
+<p>I’m passionate about learning new things and a bit of a space nerd. I enjoy classic films, listening and playing music, travelling, chatting and hacking on whatever interests me at the time.</p>
 
 <p>
 Contact Me via:
