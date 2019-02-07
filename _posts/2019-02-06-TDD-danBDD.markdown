@@ -7,14 +7,14 @@ tags: [ruby, tdd, bdd]
 ---
 
 
-Test Driven Development (TDD) dan Behavior Driven Development (BDD) merupakan 
-praktik pengembangan software dengan paradigma Agile.
+Test Driven Development (TDD) dan Behavior Driven Development (BDD) biasanya digunakan pada 
+proses pengembangan sofware dengan paradigma Agile.
 
-**TDD adalah menulis tes terlebih dahulu, kemudian kode aplikasi** Pola TDD adalah Red/Green/Refactor, 
-alurnya seperti berikut ini:
+**TDD adalah menulis tes terlebih dahulu, kemudian kode aplikasi.** Pola TDD adalah Red/Green/Refactor, 
+alurnya seperti berikut berikut:
 
-1. Menulis tes yang gagal (Red)
-2. Menulis kode agar tes lulus (Green)
+1. Menulis unit tes yang gagal (Red)
+2. Menulis kode aplikasi agar lulus tes (Green)
 3. Refactor kode aplikasi untuk maintentance dan performance. Pastikan tes tetap _green_ (Refactor)
 
 **BDD adalah teknik untuk melakukan TDD agar testing lebih mudah dipahami.** Jadi BDD merupakan pengembangan dari TDD. 
