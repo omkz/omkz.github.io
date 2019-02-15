@@ -1,6 +1,6 @@
 ---
 published: true
-title: System Test dan Integeation Test pada Rails
+title: System Test dan Integration Test pada Rails
 layout: post
 categories: ruby
 tags: [ruby, testing]
