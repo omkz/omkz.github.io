@@ -3,7 +3,7 @@ published: true
 title: TDD dan BDD
 layout: post
 categories: ruby
-tags: [ruby, tdd, bdd]
+tags: [ruby, testing]
 ---
 
 

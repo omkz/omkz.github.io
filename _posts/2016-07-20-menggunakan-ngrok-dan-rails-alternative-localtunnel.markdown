@@ -3,7 +3,7 @@ published: true
 title: Menggunakan Ngrok dan Ruby on Rails(Localtunnel alternative)
 layout: post
 categories: misc
-tags: ngrok
+tags: [misc, tools]
 ---
 waktu itu ingin menunjukan proses pengembangan aplikasi rails kepada klien. mencari localtunnel kok sudah tidak ada, kemudian nemu ngrok ini.
 

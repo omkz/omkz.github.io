@@ -3,7 +3,7 @@ published: true
 title: Tutorial CRUD for Ruby on Rails 4 and Angular.js (part 2)
 layout: post
 categories: rails
-tags: [rails, angular.js]
+tags: [rails, javascript, angular.js]
 ---
 
 #### 1. buat model menggunakan generator, misal :

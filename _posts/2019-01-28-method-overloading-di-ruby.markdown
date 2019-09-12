@@ -3,7 +3,7 @@ published: true
 title: Method overloading di Ruby
 layout: post
 categories: ruby
-tags: [ruby, overloading]
+tags: [ruby, oop]
 ---
 
 Banyak programmer Java yang bertanya tentang implementasi method overloading di Ruby. Method Overloading adalah Sebuah _class_ yang mempunyai 2 atau lebih method dengan nama yang sama, yang membedakan adalah argumentsnya. Yaitu jumlah dan tipe data dari arguments tersebut. Ruby tidak mendukung method overloading seperti bahasa dengan static typing. Contoh:
