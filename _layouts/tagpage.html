@@ -7,7 +7,7 @@ layout: default
         {%- include sidebar.html -%}
         <div class="column is-9">
             <div class="box content">
-              {%- for post in site.posts -%}
+              {%- for post in site.tags[page.tag] -%}
                 <article class="post">
                     
                     <a href="{{ post.url | relative_url }}" >
@@ -39,4 +39,5 @@ layout: default
         </div>
     </div>
 </section>
+
 
