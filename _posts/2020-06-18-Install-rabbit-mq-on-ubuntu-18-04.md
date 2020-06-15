@@ -1,3 +1,11 @@
+---
+published: true
+title: Install Rabbit Mq On Ubuntu 18.04
+layout: post
+categories: misc
+tags: [rabbitmq, backend]
+---
+
 Copy the following script and save it in your server as rabbit.sh:
 
 ```bash
@@ -74,8 +82,10 @@ sudo systemctl restart rabbitmq-server.service
 
 Management UI access
 The Management Console can be accessed using either of these URLs:
+
 ```
 http://localhost:15672
+
 ```
 ![Screenshot from 2020-05-15 19-20-17](https://user-images.githubusercontent.com/444807/82049781-26bdc380-96e1-11ea-9649-ed2dbfb5939d.png)
 
