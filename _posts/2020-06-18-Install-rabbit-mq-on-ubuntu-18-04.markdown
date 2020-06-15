@@ -83,10 +83,11 @@ sudo systemctl restart rabbitmq-server.service
 Management UI access
 The Management Console can be accessed using either of these URLs:
 
-```
+```bash 
 http://localhost:15672
 
 ```
+
 ![Screenshot from 2020-05-15 19-20-17](https://user-images.githubusercontent.com/444807/82049781-26bdc380-96e1-11ea-9649-ed2dbfb5939d.png)
 
 Ref:
