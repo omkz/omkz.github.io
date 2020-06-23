@@ -2,8 +2,8 @@
 published: true
 title: Add a new user on Amazon EC2 Ubuntu 12.04 instance
 layout: post
-categories: misc
-tags: [linux, aws. ec2]
+categories: linux
+tags: [linux, aws,ec2]
 ---
 
 Yea that's right Ubuntu 12.04, that's not the wrong title. The following are the steps to create a user on Ubuntu 12.04.
