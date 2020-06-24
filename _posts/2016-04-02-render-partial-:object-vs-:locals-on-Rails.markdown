@@ -3,7 +3,7 @@ published: true
 title: Render partial :object vs :locals on Rails
 layout: post
 categories: rails
-tags: rails
+tags: ruby, rails
 ---
 
 ```erb
