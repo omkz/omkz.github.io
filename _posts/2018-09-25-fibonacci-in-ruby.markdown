@@ -15,7 +15,7 @@ tags: [ruby, algorithm]
 dalam contoh diatas bisa dilihat bahwa angka 8(suku ke 6) diperoleh dari 5 (suku ke-5) + 3(suku ke-4). jadi rumusnya adalah:
 
 ```
-f(n) = f(n-1)+f(n2)
+f(n) = f(n-1)+f(n-2)
 ```
 
 maka contoh implementasinya di ruby adalah sebagai berikut:
